@@ -11,7 +11,7 @@ import AddDossier from "./User/Add_Dossier/AddDossier";
 import AddDArchive from "./User/Add_Dossier/AddDArchive";
 import GestionListDossier from "./User/GestionListDossier";
 import ListDossier from "./User/List_Dossier/ListArchive";
-
+import DashbordAdmin from "./Admin/DashbordAdmin"
 export default function App() {
   return (
     <BrowserRouter>
@@ -29,6 +29,10 @@ export default function App() {
         <Route path="/GestionListDossier" element={<GestionListDossier />} />
         <Route path="/ListDossier" element={<ListDossier />} />
         <Route path="/ListArchive" element={<ListDossier />} />
+
+        {/* Admin */}
+        <Route path="/DashbordAdmin" element={<DashbordAdmin />} />
+        
       </Routes>
     </BrowserRouter>
   );

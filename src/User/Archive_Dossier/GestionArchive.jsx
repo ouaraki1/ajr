@@ -433,7 +433,7 @@ export default function GestionArchive() {
     if (!formData.secteurTravail) {
       newErrors.secteurTravail = "Le secteur de travail est requis";
     }
-    
+    // editerr patern
     if (!formData.dossierID) {
       newErrors.dossierID = "Le numéro du dossier est requis";
     } else if (!/^DOS-\d{5}$/.test(formData.dossierID)) {

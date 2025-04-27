@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Interface Routes
 import Home from "./Intrface/Home";
@@ -11,7 +12,9 @@ import AddDossier from "./User/Add_Dossier/AddDossier";
 import AddDArchive from "./User/Add_Dossier/AddDArchive";
 import GestionListDossier from "./User/GestionListDossier";
 import ListDossier from "./User/List_Dossier/ListArchive";
-import DashbordAdmin from "./Admin/DashbordAdmin"
+// Admin Routes
+import DashboardAdmin from "./Admin/DashboardAdmin"
+import DashboardTechnicien from "./Technicien/DashboardTechnicien"
 export default function App() {
   return (
     <BrowserRouter>
@@ -29,10 +32,10 @@ export default function App() {
         <Route path="/GestionListDossier" element={<GestionListDossier />} />
         <Route path="/ListDossier" element={<ListDossier />} />
         <Route path="/ListArchive" element={<ListDossier />} />
-
         {/* Admin */}
-        <Route path="/DashbordAdmin" element={<DashbordAdmin />} />
-        
+        <Route path="/DashboardAdmin" element={<DashboardAdmin />} />
+        {/* Technicien */}
+        <Route path='/DashboardTechnicien' element={<DashboardTechnicien/>}/>
       </Routes>
     </BrowserRouter>
   );
